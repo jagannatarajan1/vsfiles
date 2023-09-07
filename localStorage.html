@@ -28,14 +28,33 @@
             localStorage.setItem('name',inputname);
             localStorage.setItem('email',emailinput);
             localStorage.setItem('phone',phoneinput);
-            console.log(localStorage);
             let li =document.createElement('li');
             li.className='item';
             let output=(inputname+" - "+emailinput+" - "+phoneinput)
             li.appendChild(document.createTextNode(output));
+
+            //delete btn add
             document.getElementById('listitems').appendChild(li);
+            let deletebtn=document.createElement('button');
+            deletebtn.className='delete';
+            deletebtn.appendChild(document.createTextNode('delete'));
+            li.appendChild(deletebtn);
+            console.log(localStorage);
         })
+        listitems.addEventListener('click',removeitem);
+        function removeitem(e){
+        let list= e.target.parentElement;
+        listitems.removeChild(list);
+        localStorage.removeItem('name');
+        localStorage.removeItem('email');
+        localStorage.removeItem('phone');
+        localStorage.removeItem('name');
+
+
+        }
+        
 
     </script>
+  
 </body>
 </html>
