@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="bootstrap-breakpoint.css">
+</head>
+<body>
+    <div class="container align-items-center m-auto ">
+        <div class="card m-4 p-3 h-30 ">
+            <div id="formhead ">
+                <div class="card-header">
+                    <h1>Book a call</h1>
+                    <h3>Book a call slot and our Represtative will call you</h3>
+                </div>
+               
+                <form novalidate>
+                    <div class="form-group ">
+                        <label for="Name" class="form-label">Name</label>
+                        <input type="text"id="Name" name="Name" class="form-control" placeholder="Enter your name "required>
+        
+                    </div>
+                    <div class="form-group">
+                        <label for="Email" class="form-label">Email</label>
+                    <input type="email"id="Email" name="Email" class="form-control" placeholder="Enter your Email" required>
+                    <label for="phone" class="form-label">Phone no</label>
+                    <input type="number" id="phone"name="phone" class="form-control" placeholder="Enter your Phone no" required>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="date" class=" input-group ">Time for call</label>
+                    
+                    <input type="date" id="date"name="date" class="form-control w-50"  >
+                    <input type="time"id="date2"class="form-control w-50" >
+                        
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class=" btn btn-primary mt-2"  id="button">
+                        
+                    </div>
+                  
+                    
+                    
+                   
+                    
+                    
+                    
+                    
+                    
+                </form>
+        
+            </div>
+        </div>
+    </div>
+   <script>
+    const form =document.querySelector("form")
+    form.addEventListener('submit',e=>{
+        if(!form.checkValidity()){
+            e.preventDefault()
+        }
+        form.classList.add('was-validated')
+    })
+   </script>
+    </body>
+    
+
+    
+</body>
+</html>

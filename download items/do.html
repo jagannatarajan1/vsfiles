@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <title>Item Lister</title>
+</head>
+<body>
+  <header id="main-header" class="bg-success text-white p-4 mb-3">
+    <div class="container">
+      <h1 id="header-title">Item Lister <span style="display:none">123</span></h1>
+    </div>
+  </header>
+  <div class="container">
+   <div id="main" class="card card-body">
+    <h2 class="title">Add Items</h2>
+    <form class="form-inline mb-3">
+      <input type="text" class="form-control mr-2">
+      <input type="submit" class="btn btn-dark" value="Submit">
+    </form>
+    <h2 class="title">Items</h2>
+    <ul id="items" class="list-group">
+      <li class="list-group-item">Item 1</li>
+      <li class="list-group-item">Item 2</li>
+      <li class="list-group-item">Item 3</li>
+      <li class="list-group-item">Item 4</li>
+    </ul>
+    <span>raju</span>
+   </div>
+  </div>
+<script>
+let products=document.querySelector('#items');
+console.log(products.parentElement);
+products.parentElement.style.backgroundColor="red";
+console.log(products.lastElementChild);
+console.log(products.lastChild);
+console.log(products.firstElementChild);
+console.log(products.firstChild);
+console.log(products.nextSibling);
+console.log(products.nextElementSibling);
+console.log(products.previousSibling);
+console.log(products.previousElementSibling);
+let newDiv=document.createElement('div');
+newDiv.className="puthusu";
+newDiv.id="natha";
+newDiv.setAttribute('title','hello')
+newDiv.textContent="HEllo word";
+let newpiv=document.createElement('div');
+newpiv.className="puthus";
+newpiv.id="nath";
+newpiv.textContent="HEllo word";
+let h1=document.querySelector('header h1');
+let container=document.querySelector('header .container ');
+container.insertBefore(newDiv,h1);
+let item1=products.firstElementChild;
+products.insertBefore(newpiv,item1);
+</script>
+</body>
+</html>
