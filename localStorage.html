@@ -31,12 +31,8 @@
             console.log(localStorage);
             let li =document.createElement('li');
             li.className='item';
-            li.appendChild(document.createTextNode(inputname));
-            li.appendChild(document.createTextNode(" - "));
-            li.appendChild(document.createTextNode(emailinput));
-            li.appendChild(document.createTextNode(" - "));
-
-            li.appendChild(document.createTextNode(phoneinput));
+            let output=(inputname+" - "+emailinput+" - "+phoneinput)
+            li.appendChild(document.createTextNode(output));
             document.getElementById('listitems').appendChild(li);
         })
 
