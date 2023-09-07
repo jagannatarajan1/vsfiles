@@ -12,10 +12,13 @@ btn.addEventListener('mouseout',(e)=>{
     document.querySelector('body').style.background="red";
 })
 let myform=document.querySelector('form');
-let inputname=document.querySelector(".text");
-let emailname=document.querySelector('.email');
+
 myform.addEventListener('submit', (e)=>{
     e.preventDefault();
+    let inputname=document.getElementById("name");
+    let emailname=document.getElementById('email');
+    localStorage.setItem('name',inputname.value);
+    localStorage.setItem('email',emailname.value);
     if(inputname.value===" "||emailname.value===" "){
         inputname.addEventListener('error');
     }//food
