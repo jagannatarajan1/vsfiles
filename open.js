@@ -12,6 +12,13 @@ btn.addEventListener('mouseout',(e)=>{
     document.querySelector('body').style.background="red";
 })
 let myform=document.querySelector('form');
+let myobj={
+    objname:"jagan",
+    objemail:"jaganatarajan1@gmail.com"
+}
+let obj_serialized=JSON.stringify(myobj);
+localStorage.setItem("obj",obj_serialized);
+console.log(localStorage);
 
 myform.addEventListener('submit', (e)=>{
     e.preventDefault();
