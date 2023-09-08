@@ -40,8 +40,16 @@
             deletebtn.appendChild(document.createTextNode('delete'));
             li.appendChild(deletebtn);
             console.log(localStorage);
+
+            // edit btn add
+            let editbtn=document.createElement('button');
+            editbtn.className="edit";
+            editbtn.appendChild(document.createTextNode('Edit'));
+            li.appendChild(editbtn);
         })
-        listitems.addEventListener('click',removeitem);
+        listitems.addEventListener('click',  removeitem);
+       listitems.addEventListener('click', editItem);
+    
         function removeitem(e){
         let list= e.target.parentElement;
         listitems.removeChild(list);
@@ -49,9 +57,26 @@
         localStorage.removeItem('email');
         localStorage.removeItem('phone');
         localStorage.removeItem('name');
+       
 
 
         }
+        function editItem(e) {
+    if (e.target.classList.contains('edit')) {
+        // Get the values from local storage and populate the input fields
+        const name = localStorage.getItem('name');
+        const email = localStorage.getItem('email');
+        const phone = localStorage.getItem('phone');
+
+        document.querySelector("#name").value = name;
+        document.querySelector("#email").value = email;
+        document.querySelector("#phone").value = phone;
+    }
+}
+
+// Attach event listeners to the list items
+
+        
         
 
     </script>
