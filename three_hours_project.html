@@ -52,6 +52,9 @@
             let expense = document.querySelector('#expense').value;
             let choose_description = document.querySelector('#choose_description').value;
             let Choose_a_category = document.querySelector('#Choose_a_category').value;
+            localStorage.setItem('expense',expense);
+            localStorage.setItem('choose_description',choose_description);
+            localStorage.setItem('Choose_a_category',Choose_a_category);
            
             let li = document.createElement('li');
             li.className = 'items';
@@ -81,6 +84,9 @@
         if (confirm('Are You Sure')) {
           let list = e.target.parentElement;
           listitems.removeChild(list);
+          localStorage.removeItem('expense');
+          localStorage.removeItem('choose_description');
+          localStorage.removeItem('Choose_a_category');
         }
       }
     }
